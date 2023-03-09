@@ -45,6 +45,7 @@ tapeCount = 0           # To count the number of tapes
 while(oldTapeHead != tape_head):
     oldTapeHead = tape_head
     print(tape, "Head: ", tape_head, "State: ", state)
+    tapeCount += 1
 
     # q0 State
     if state == q0:
@@ -124,8 +125,4 @@ while(oldTapeHead != tape_head):
             pass
     else:
         accept = True
-
-""" if accept:
-    print("String accepted on state = ", state)
-else:
-    print("String not accepted on state = ", state) """
+print("Number of tapes used: ", tapeCount)
