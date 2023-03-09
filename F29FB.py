@@ -21,3 +21,14 @@ length = len(val)
 # print(length1, length2)
 tape = ['B'] * (length+3)
 # print(tape)
+
+# Initialising the tape
+i = 1
+tape_head = 1
+
+# Adding the input value to the tape
+for n in range(length):
+    tape[i] = val[n]
+    i += 1
+
+
