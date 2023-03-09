@@ -14,3 +14,10 @@ def action(input, write, move, next_state):
         return True
     return False
     
+val = input("Make sure to enter your number as a set of ones (i.e. if the number if 2 * 3, enter it is '11*111')\nEnter the input: ")
+# number2 = input("Enter the second factor: ")
+# print(number1,number2)
+length = len(val)
+# print(length1, length2)
+tape = ['B'] * (length+3)
+# print(tape)
