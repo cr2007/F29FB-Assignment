@@ -38,11 +38,12 @@ q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, done = 'q9', 'q10', 'q11', 'q12
 
 state = q0              # Start state
 R, L, B = 'R', 'L', '∧' # Right, Left, Blank symbols
-oldtapehead = -1        # To check if the tape head has moved
+oldTapeHead = -1        # To check if the tape head has moved
 accept = False          # Acceptance state
+tapeCount = 0           # To count the number of tapes
 
-while(oldtapehead != tape_head):
-    oldtapehead = tape_head
+while(oldTapeHead != tape_head):
+    oldTapeHead = tape_head
     print(tape, "Head: ", tape_head, "State: ", state)
 
     # q0 State
