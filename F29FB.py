@@ -31,4 +31,12 @@ for n in range(length):
     tape[i] = val[n]
     i += 1
 
+# Declaring variables so that characters don't have to be used everytime
+q0, q1, q2, q3, q4, q5 = 'q0', 'q1', 'q2', 'q3', 'q4', 'q5' # States q0-q5
+q6, q7, q8, q9, q10 = 'q6', 'q7', 'q8', 'q9', 'q10'         # States q6-q10
+state = q0                                                  # Start state
+R, L, B = 'R', 'L', 'B'                                     # Right, Left, Blank symbols
+oldtapehead = -1                                            # To check if the tape head has moved
+accept = False                                              # Acceptance state
+
 
