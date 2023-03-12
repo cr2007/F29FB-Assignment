@@ -1,0 +1,63 @@
+start state: q0
+table:
+  q0:
+    '1': {write: ' ', R: q1}
+    ' ': {write: ' ', R: q10} 
+    '*': {write: '*', L: q9}  
+  q1:
+    '1': {write: '1', R: q1}
+    '*': {write: '*', R: q2}
+  q2:
+    '1': {write: ' ', R: q3}
+    '=': {write: '=', L: q7}
+    ' ': {write: ' ', R: q12}
+  q3:
+    '1': {write: '1', R: q3}
+    [' ','=']: {write: '=', R: q4}
+  q4:
+    '1': {write: '1', R: q4}
+    ' ': {write: '1', L: q5}
+  q5:
+    '1': {write: '1', L: q5}
+    '=': {write: '=', L: q6}
+  q6:
+    '1': {write: '1', L: q6}
+    ' ': {write: '1', R: q2}
+  q7:
+    '1': {write: '1', L: q7}
+    '*': {write: '*', L: q8}
+  q8:
+    '1': {write: '1', L: q8}
+    ' ': {write: '1', R: q0}
+  q9:
+    '1': {write: '1', L: q9}
+    ' ': {write: ' ', R: done}
+  
+  q10:
+   '1': {write: '1', R: q10}
+   '*': {write: '*', R: q10}
+   ' ': {write: '=', L: q11}
+  q11:
+   '1': {write: '1', L: q11}
+   '*': {write: '*', L: q11}
+   ' ': {write: ' ', R: q18}
+  q12:
+   ' ': {write: '=', L: q14}
+  q13:
+   ' ': {write: ' ', R: q19}
+  q19:
+   ' ': {write: '1', R: q19}
+   '*': {write: '*', L: q17}
+   '1': {write: '1', R: q17}
+  q14:
+   ' ': {write: ' ', L: q15}
+  q15:
+   '*': {write: '*', L: q16}
+  q16:
+   ' ': {write: ' ', L: q13}
+   '1': {write: '1', L: q16}
+  q17:
+   ' ': {write: '1', R: done}
+  q18:
+   '*': {write: '*', L: done}
+  done:
