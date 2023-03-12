@@ -1,63 +1,92 @@
-start state: q0
-table:
-  q0:
-    '1': {write: ' ', R: q1}
-    ' ': {write: ' ', R: q10} 
-    '*': {write: '*', L: q9}  
-  q1:
-    '1': {write: '1', R: q1}
-    '*': {write: '*', R: q2}
-  q2:
-    '1': {write: ' ', R: q3}
-    '=': {write: '=', L: q7}
-    ' ': {write: ' ', R: q12}
-  q3:
-    '1': {write: '1', R: q3}
-    [' ','=']: {write: '=', R: q4}
-  q4:
-    '1': {write: '1', R: q4}
-    ' ': {write: '1', L: q5}
-  q5:
-    '1': {write: '1', L: q5}
-    '=': {write: '=', L: q6}
-  q6:
-    '1': {write: '1', L: q6}
-    ' ': {write: '1', R: q2}
-  q7:
-    '1': {write: '1', L: q7}
-    '*': {write: '*', L: q8}
-  q8:
-    '1': {write: '1', L: q8}
-    ' ': {write: '1', R: q0}
-  q9:
-    '1': {write: '1', L: q9}
-    ' ': {write: ' ', R: done}
-  
-  q10:
-   '1': {write: '1', R: q10}
-   '*': {write: '*', R: q10}
-   ' ': {write: '=', L: q11}
-  q11:
-   '1': {write: '1', L: q11}
-   '*': {write: '*', L: q11}
-   ' ': {write: ' ', R: q18}
-  q12:
-   ' ': {write: '=', L: q14}
-  q13:
-   ' ': {write: ' ', R: q19}
-  q19:
-   ' ': {write: '1', R: q19}
-   '*': {write: '*', L: q17}
-   '1': {write: '1', R: q17}
-  q14:
-   ' ': {write: ' ', L: q15}
-  q15:
-   '*': {write: '*', L: q16}
-  q16:
-   ' ': {write: ' ', L: q13}
-   '1': {write: '1', L: q16}
-  q17:
-   ' ': {write: '1', R: done}
-  q18:
-   '*': {write: '*', L: done}
-  done:
+name: unary multiplication
+source code: |-
+  # Multiplies together two unary numbers separated by a '*'.
+  # (Unary is like tallying. Here '11*111' means 2 times 3.)
+  input: '111* ' # try '*', '1*111', '1111*11'
+  blank: ' '
+
+  start state: q0
+  table:
+    q0:
+      '1': {write: ' ', R: q1}
+      ' ': {write: ' ', R: q10} 
+      '*': {write: '*', L: q9}  
+    q1:
+      '1': {write: '1', R: q1}
+      '*': {write: '*', R: q2}
+    q2:
+      '1': {write: ' ', R: q3}
+      '=': {write: '=', L: q7}
+      ' ': {write: ' ', R: q12}
+    q3:
+      '1': {write: '1', R: q3}
+      [' ','=']: {write: '=', R: q4}
+    q4:
+      '1': {write: '1', R: q4}
+      ' ': {write: '1', L: q5}
+    q5:
+      '1': {write: '1', L: q5}
+      '=': {write: '=', L: q6}
+    q6:
+      '1': {write: '1', L: q6}
+      ' ': {write: '1', R: q2}
+    q7:
+      '1': {write: '1', L: q7}
+      '*': {write: '*', L: q8}
+    q8:
+      '1': {write: '1', L: q8}
+      ' ': {write: '1', R: q0}
+    q9:
+      '1': {write: '1', L: q9}
+      ' ': {write: ' ', R: done}
+    
+    q10:
+     '1': {write: '1', R: q10}
+     '*': {write: '*', R: q10}
+     ' ': {write: '=', L: q11}
+    q11:
+     '1': {write: '1', L: q11}
+     '*': {write: '*', L: q11}
+     ' ': {write: ' ', R: q18}
+    q12:
+     ' ': {write: '=', L: q14}
+    q13:
+     ' ': {write: ' ', R: q19}
+    q19:
+     ' ': {write: '1', R: q19}
+     '*': {write: '*', L: q17}
+     '1': {write: '1', R: q17}
+    q14:
+     ' ': {write: ' ', L: q15}
+    q15:
+     '*': {write: '*', L: q16}
+    q16:
+     ' ': {write: ' ', L: q13}
+     '1': {write: '1', L: q16}
+    q17:
+     ' ': {write: '1', R: done}
+    q18:
+     '*': {write: '*', L: done}
+    done:
+positions:
+  q0: {x: 20, y: 70.57}
+  q1: {x: 223.96, y: 75.82}
+  q2: {x: 461.93, y: 75.56}
+  q3: {x: 599.02, y: 75.03}
+  q4: {x: 731.57, y: 85.03}
+  q5: {x: 732.2, y: 261.7}
+  q6: {x: 732.66, y: 480}
+  q7: {x: 356.61, y: 188.52}
+  q8: {x: 250.98, y: 189.84}
+  q9: {x: 141.08, y: 248.21}
+  q10: {x: 20, y: 300.38}
+  q11: {x: 20, y: 480}
+  q12: {x: 461.39, y: 290.63}
+  q13: {x: 347.31, y: 480}
+  q19: {x: 430.14, y: 480, fixed: false}
+  q14: {x: 314.82, y: 269.31}
+  q15: {x: 191.77, y: 361.65}
+  q16: {x: 185.3, y: 480}
+  q17: {x: 513.91, y: 480}
+  q18: {x: 578.91, y: 370}
+  done: {x: 645.26, y: 480}
