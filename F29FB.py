@@ -39,20 +39,21 @@ for n in range(length):
     i += 1               # Incrementing the tape index
 
 # Declaring variables so that characters don't have to be used everytime
-q0, q1, q2, q3, q4, q5, q6, q7, q8, q9 = 'q0', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9' # States q0-q9
+q0, q1, q2, q3, q4 = 'q0', 'q1', 'q2', 'q3', 'q4' # States q0-q4
+q5, q6, q7, q8, q9 = 'q5', 'q6', 'q7', 'q8', 'q9' # States q5-q9
 q10, q11, q12, q13, q14, q15, q16 = 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16' # States q10-q16
 done:str = 'q17' # Acceptance State
 
 state:str = q0          # Start state
 r, l, b = 'R', 'L', '∧' # Right, Left, Blank symbols
 accept:bool = False     # To check if the input is accepted
-oldTapeHead = -1        # To check if the tape head has moved
-tapeCount = 0           # To count the number of tapes
+old_tape_head = -1      # To check if the tape head has moved
+tape_count = 0          # To count the number of tapes
 
-while(oldTapeHead != tape_head):
-    oldTapeHead = tape_head
+while old_tape_head != tape_head:
+    old_tape_head = tape_head
     print(tape, "Head: ", tape_head, "State: ", state)
-    tapeCount += 1
+    tape_count += 1
 
     # q0 State
     if state == q0:
