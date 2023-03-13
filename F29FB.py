@@ -44,8 +44,8 @@ q10, q11, q12, q13, q14, q15, q16 = 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q
 done:str = 'q17' # Acceptance State
 
 state:str = q0          # Start state
-R, L, B = 'R', 'L', '∧' # Right, Left, Blank symbols
-accept:bool = False         # To check if the input is accepted
+r, l, b = 'R', 'L', '∧' # Right, Left, Blank symbols
+accept:bool = False     # To check if the input is accepted
 oldTapeHead = -1        # To check if the tape head has moved
 tapeCount = 0           # To count the number of tapes
 
@@ -56,71 +56,71 @@ while(oldTapeHead != tape_head):
 
     # q0 State
     if state == q0:
-        if action('1',B,R,q1) or action(B,B,R,q10) or action('*','*',L,q9):
+        if action('1',b,r,q1) or action(b,b,r,q10) or action('*','*',l,q9):
             pass
     # q1 State
     elif state == q1:
-        if action('1','1',R,q1) or action('*','*',R,q2):
+        if action('1','1',r,q1) or action('*','*',r,q2):
             pass
     # q2 State
     elif state == q2:
-        if action('1',B,R,q3) or action('=','=',L,q7) or action(B,B,R,q12):
+        if action('1',b,r,q3) or action('=','=',l,q7) or action(b,b,r,q12):
             pass
     # q3 State
     elif state == q3:
-        if action('1','1',R,q3) or action(B,'=',R,q4) or action('=','=',R,q4):
+        if action('1','1',r,q3) or action(b,'=',r,q4) or action('=','=',r,q4):
             pass
     # q4 State
     elif state == q4:
-        if action('1','1',R,q4) or action(B,'1',L,q5):
+        if action('1','1',r,q4) or action(b,'1',l,q5):
             pass
     # q5 State
     elif state == q5:
-        if action('1','1',L,q5) or action('=','=',L,q6):
+        if action('1','1',l,q5) or action('=','=',l,q6):
             pass
     # q6 State
     elif state == q6:
-        if action('1','1',L,q6) or action(B,'1',R,q2):
+        if action('1','1',l,q6) or action(b,'1',r,q2):
             pass
     # q7 State
     elif state == q7:
-        if action('1','1',L,q7) or action('*','*',L,q8):
+        if action('1','1',l,q7) or action('*','*',l,q8):
             pass
     # q8 State
     elif state == q8:
-        if action('1','1',L,q8) or action(B,'1',R,q0):
+        if action('1','1',l,q8) or action(b,'1',r,q0):
             pass
     # q9 State
     elif state == q9:
-        if action('1','1',L,q9) or action(B,B,R,done):
+        if action('1','1',l,q9) or action(b,b,r,done):
             pass
     # q10 State
     elif state == q10:
-        if action('1','1',R,q10) or action('*','*',R,q10) or action(B,'=',L,q11):
+        if action('1','1',r,q10) or action('*','*',r,q10) or action(b,'=',l,q11):
             pass
     # q11 State
     elif state == q11:
-        if action('1','1',L,q11) or action('*','*',L,q11) or action(B,B,R,q16):
+        if action('1','1',l,q11) or action('*','*',l,q11) or action(b,b,r,q16):
             pass
     # q12 State
     elif state == q12:
-        if action(B,'=',L,q13):
+        if action(b,'=',l,q13):
             pass
     # q13 State
     elif state == q13:
-        if action(B,B,L,q14):
+        if action(b,b,l,q14):
             pass
     # q14 State
     elif state == q14:
-        if action('*','*',L,q15):
+        if action('*','*',l,q15):
             pass
     # q15 State
     elif state == q15:
-        if action(B,'1',L,q9) or action('1','1',L,q15):
+        if action(b,'1',l,q9) or action('1','1',l,q15):
             pass
     # q16 State
     elif state == q16:
-        if action('*','*',L,done):
+        if action('*','*',l,done):
             pass
     else:
         accept = True
