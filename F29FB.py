@@ -51,10 +51,11 @@ accept:bool = False     # To check if the input is accepted
 old_tape_head = -1      # To check if the tape head has moved
 tape_count = 0          # To count the number of tapes
 
+# While the tape head has moved
 while old_tape_head != tape_head:
-    old_tape_head = tape_head
-    print(tape, "Head: ", tape_head, "State: ", state)
-    tape_count += 1
+    old_tape_head = tape_head                          # Updating the old tape head
+    print(tape, "Head: ", tape_head, "State: ", state) # Printing the tape
+    tape_count += 1                                    # Incrementing the tape count
 
     # q0 State
     if state == q0:
@@ -127,10 +128,11 @@ while old_tape_head != tape_head:
     else:
         accept = True
 
+# If the input is accepted
 if accept:
-    print("\nSuccessfull!!")
+    print("\nSuccessfull!!")                           # Printing the success message
     print("*****************************************")
-    print(f"Number of tapes used: {tape_count}")
+    print(f"Number of tapes used: {tape_count}")       # Printing the number of tapes used
     print("*****************************************")
 else:
-    print(f"Input not accepted on state = {state}\n")
+    print(f"Input not accepted on state = {state}\n")  # Printing the error message
