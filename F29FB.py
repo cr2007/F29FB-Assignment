@@ -21,7 +21,7 @@ def action(input_val: str, write: str, move: str, next_state: str):
 
 
 # Input Value
-input_text = "Make sure to enter your number as a set of ones\n(i.e. if the number if 2 * 3, enter it is '11*111')\nEnter the input:"
+input_text = "Make sure to enter your number as a set of ones\n(i.e. if the number if 2 * 3, enter it is '11*111')\nEnter the input: "
 val: str = input(input_text)
 
 length: int = len(val)     # Length of the input
