@@ -14,14 +14,14 @@ def action(input_val: str, write: str, move: str, next_state: str):
         return True
     return False
 
-val = input("Make sure to enter your number as a set of ones (i.e. if the number if 2 * 3, enter it is '11*111')\nEnter the input: ")
+val:str = input("Make sure to enter your number as a set of ones (i.e. if the number if 2 * 3, enter it is '11*111')\nEnter the input: ")
 
-length = len(val)         # Length of the input
+length:int = len(val)         # Length of the input
 tape = ['∧'] * (length*3) # Initialising the tape
 
 # Initialising the tape variables
-i = 1
-tape_head = 1
+i: int = 1
+tape_head: int = 1
 
 # Adding the input value to the tape
 for n in range(length):
@@ -34,11 +34,12 @@ for n in range(length):
 
 # Declaring variables so that characters don't have to be used everytime
 q0, q1, q2, q3, q4, q5, q6, q7, q8, q9 = 'q0', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9' # States q0-q9
-q10, q11, q12, q13, q14, q15, q16, q17, q18, q19 = 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19'
-done = 'q20' # States q10-q20
+q10, q11, q12, q13, q14, q15, q16 = 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16' # States q10-q16
+done:str = 'q17' # Acceptance State
 
-state = q0              # Start state
+state:str = q0              # Start state
 R, L, B = 'R', 'L', '∧' # Right, Left, Blank symbols
+accept:bool = False         # To check if the input is accepted
 oldTapeHead = -1        # To check if the tape head has moved
 tapeCount = 0           # To count the number of tapes
 
@@ -93,40 +94,35 @@ while(oldTapeHead != tape_head):
             pass
     # q11 State
     elif state == q11:
-        if action('1','1',L,q11) or action('*','*',L,q11) or action(B,B,R,q18):
+        if action('1','1',L,q11) or action('*','*',L,q11) or action(B,B,R,q16):
             pass
     # q12 State
     elif state == q12:
-        if action(B,'=',L,q14):
+        if action(B,'=',L,q13):
             pass
     # q13 State
     elif state == q13:
-        if action(B,B,R,q19):
-            pass
-    elif state == q19:
-        if action(B,'1',R,q19) or action('*','*',L,q17) or action('1','1',R,q17):
+        if action(B,B,L,q14):
             pass
     # q14 State
     elif state == q14:
-        if action(B,B,L,q15):
+        if action('*','*',L,q15):
             pass
     # q15 State
     elif state == q15:
-        if action('*','*',L,q16):
+        if action(B,'1',L,q9) or action('1','1',L,q15):
             pass
     # q16 State
     elif state == q16:
-        if action(B,B,L,q13) or action('1','1',L,q16):
-            pass
-    # q17 State
-    elif state == q17:
-        if action(B,'1',R,done):
-            pass
-    # q18 State
-    elif state == q18:
         if action('*','*',L,done):
             pass
+    else:
+        accept = True
 
-print("\n*****************************************")
-print("Number of tapes used: ", tapeCount)
-print("*****************************************")
+if accept:
+    print("\nSuccessfull!!")
+    print("*****************************************")
+    print("Number of tapes used: {}".format(tapeCount))
+    print("*****************************************")
+else:
+    print("Input not accepted on state = {}".format(state))

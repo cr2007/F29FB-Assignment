@@ -2,7 +2,7 @@ name: unary multiplication
 source code: |-
   # Multiplies together two unary numbers separated by a '*'.
   # (Unary is like tallying. Here '11*111' means 2 times 3.)
-  input: '111* ' # try '*', '1*111', '1111*11'
+  input: ' *1' # try '*', '1*111', '1111*11'
   blank: ' '
 
   start state: q0
@@ -39,7 +39,6 @@ source code: |-
     q9:
       '1': {write: '1', L: q9}
       ' ': {write: ' ', R: done}
-    
     q10:
      '1': {write: '1', R: q10}
      '*': {write: '*', R: q10}
@@ -47,25 +46,17 @@ source code: |-
     q11:
      '1': {write: '1', L: q11}
      '*': {write: '*', L: q11}
-     ' ': {write: ' ', R: q18}
+     ' ': {write: ' ', R: q16}
     q12:
-     ' ': {write: '=', L: q14}
+     ' ': {write: '=', L: q13}
     q13:
-     ' ': {write: ' ', R: q19}
-    q19:
-     ' ': {write: '1', R: q19}
-     '*': {write: '*', L: q17}
-     '1': {write: '1', R: q17}
+     ' ': {write: ' ', L: q14}
     q14:
-     ' ': {write: ' ', L: q15}
+     '*': {write: '*', L: q15}
     q15:
-     '*': {write: '*', L: q16}
+     ' ': {write: '1', L: q9}
+     '1': {write: '1', L: q15}
     q16:
-     ' ': {write: ' ', L: q13}
-     '1': {write: '1', L: q16}
-    q17:
-     ' ': {write: '1', R: done}
-    q18:
      '*': {write: '*', L: done}
     done:
 positions:
@@ -76,17 +67,14 @@ positions:
   q4: {x: 731.57, y: 85.03}
   q5: {x: 732.2, y: 261.7}
   q6: {x: 732.66, y: 480}
-  q7: {x: 356.61, y: 188.52}
-  q8: {x: 250.98, y: 189.84}
+  q7: {x: 360.06, y: 210.4}
+  q8: {x: 254.43, y: 208.26}
   q9: {x: 141.08, y: 248.21}
   q10: {x: 20, y: 300.38}
   q11: {x: 20, y: 480}
-  q12: {x: 461.39, y: 290.63}
-  q13: {x: 347.31, y: 480}
-  q19: {x: 430.14, y: 480, fixed: false}
-  q14: {x: 314.82, y: 269.31}
-  q15: {x: 191.77, y: 361.65}
-  q16: {x: 185.3, y: 480}
-  q17: {x: 513.91, y: 480}
-  q18: {x: 578.91, y: 370}
-  done: {x: 645.26, y: 480}
+  q12: {x: 461.39, y: 193.9}
+  q13: {x: 463.06, y: 297.08}
+  q14: {x: 459.92, y: 406.34}
+  q15: {x: 141.1, y: 404}
+  q16: {x: 176.09, y: 480}
+  done: {x: 481.74, y: 480}
