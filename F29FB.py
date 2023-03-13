@@ -1,27 +1,33 @@
 ##### F29FB Assignment #####
 ## CHANDRASHEKHAR RAMAPRASAD - cr2007 ##
 
-
 def action(input_val: str, write: str, move: str, next_state: str):
+    """Function to check if the input value is the same as the value on the tape
+        and if it is, then it performs the action and returns True.\n
+        If the input value is not the same as the value on the tape, then it returns False."""
+    # Initialising the global variables
     global tape_head, state
     if tape[tape_head] == input_val:
-        tape[tape_head] = write
-        state = next_state
-        if move == 'L':
-            tape_head -= 1
-        else:
-            tape_head += 1
-        return True
-    return False
+        tape[tape_head] = write # Writing the value to the tape
+        state = next_state      # Changing the state
 
+        # Moving the tape head
+        if move == 'L':
+            tape_head -= 1 # Moving the tape head to the left
+        else:
+            tape_head += 1 # Moving the tape head to the right
+        return True        # Returning True if the action is successful
+    return False           # Returning False if the action is unsuccessful
+
+# Input Value
 val:str = input("Make sure to enter your number as a set of ones (i.e. if the number if 2 * 3, enter it is '11*111')\nEnter the input: ")
 
-length:int = len(val)         # Length of the input
-tape = ['∧'] * (length*3) # Initialising the tape
+length:int = len(val)     # Length of the input
+tape = ['∧'] * (length*3) # Initialising the tape with the values
 
 # Initialising the tape variables
-i: int = 1
-tape_head: int = 1
+i: int = 1         # Tape index
+tape_head: int = 1 # Tape head
 
 # Adding the input value to the tape
 for n in range(length):
@@ -29,15 +35,15 @@ for n in range(length):
     if val[n] == '0' or val[n] == 'B':
         tape[i] = '∧'
     else:
-        tape[i] = val[n]
-    i += 1
+        tape[i] = val[n] # Else add the value to the tape
+    i += 1               # Incrementing the tape index
 
 # Declaring variables so that characters don't have to be used everytime
 q0, q1, q2, q3, q4, q5, q6, q7, q8, q9 = 'q0', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9' # States q0-q9
 q10, q11, q12, q13, q14, q15, q16 = 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16' # States q10-q16
 done:str = 'q17' # Acceptance State
 
-state:str = q0              # Start state
+state:str = q0          # Start state
 R, L, B = 'R', 'L', '∧' # Right, Left, Blank symbols
 accept:bool = False         # To check if the input is accepted
 oldTapeHead = -1        # To check if the tape head has moved
