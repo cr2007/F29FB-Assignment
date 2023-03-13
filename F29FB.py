@@ -129,7 +129,7 @@ while old_tape_head != tape_head:
 if accept:
     print("\nSuccessfull!!")
     print("*****************************************")
-    print(f"Number of tapes used: {tapeCount}")
+    print(f"Number of tapes used: {tape_count}")
     print("*****************************************")
 else:
-    print(f"Input not accepted on state = {state}")
+    print(f"Input not accepted on state = {state}\n")
