@@ -57,7 +57,8 @@ tape_count = 0           # To count the number of tapes
 # While the tape head has moved
 while old_tape_head != tape_head:
     old_tape_head = tape_head                           # Updating the old tape head
-    print(tape, "Head: ", tape_head, "State: ", state)  # Printing the tape
+    # print(tape, "Head: ", tape_head, "State: ", state)  # Printing the tape
+    print(f"{tape} Head: {tape_head:2d}  State: {state}")  # Printing the tape
     tape_count += 1                                     # Incrementing the tape count
 
     # q0 State
