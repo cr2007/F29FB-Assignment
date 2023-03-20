@@ -34,7 +34,7 @@ tape_head: int = 1  # Tape head
 # Adding the input value to the tape
 for n in range(length):
     # If value is 0, then it is a blank space
-    if val[n] == '0' or val[n] == 'B':
+    if val[n] == '0' or val[n] == 'B' or val[n] == 'b':
         tape[i] = '∧'
     else:
         tape[i] = val[n]  # Else add the value to the tape
