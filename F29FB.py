@@ -12,10 +12,7 @@ def action(input_val: str, write: str, move: str, next_state: str):
         state = next_state       # Changing the state
 
         # Moving the tape head
-        if move == 'L':
-            tape_head -= 1  # Moving the tape head to the left
-        else:
-            tape_head += 1  # Moving the tape head to the right
+        tape_head = (tape_head + 1) if move == 'R' else (tape_head - 1)
         return True         # Returning True if the action is successful
     return False            # Returning False if the action is unsuccessful
 
