@@ -33,8 +33,11 @@ for n in range(length):
     # If value is 0, then it is a blank space
     if val[n] == '0' or val[n].lower() == 'b':
         tape[i] = '∧'
-    else:
+    elif val[n] == '1' or val[n] == '*':
         tape[i] = val[n]  # Else add the value to the tape
+    else:
+        print("Invalid Input")  # If the input is invalid, then print an error message
+        exit()                 # Exit the program
     i += 1                # Incrementing the tape index
 
 # Declaring variables so that characters don't have to be used everytime
