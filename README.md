@@ -11,11 +11,13 @@ To run the code:
 Make sure that your input in a **unary value**.
 
 Accepted inputs include:
-- `1*1`
+- `1*1` ($1 \times 1$)
 - `1111*11` ($4 \times 2$)
+- `b*11` ($0 \times 2$)
 - `0*111` ($0 \times 3$)
 - `11*0` ($2 \times 0$)
 - `11*111` ($2 \times 3$)
+- `111*B` ($3 \times 0$)
 
 Unaccepted inputs include:
 - `1*2` (not unary)
