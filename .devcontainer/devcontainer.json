@@ -1,0 +1,41 @@
+{
+	"name": "Codespace for F29FB Assignment",
+	"image":"mcr.microsoft.com/devcontainers/universal:2",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				// Python Extension
+				"ms-python.python",
+				"ms-python.pylint",
+				"njpwerner.autodocstring",
+				"esbenp.prettier-vscode",
+				// Miscellaneous Extensions
+				"VisualStudioExptTeam.vscodeintellicode",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"ms-vscode-remote.remote-containers",
+                "eamodio.gitlens", // GitLens
+                "mhutchie.git-graph",
+				// Markdown
+				"yzhang.markdown-all-in-one",
+				"bierner.github-markdown-preview",
+				// Icon Pack
+				"vscode-icons-team.vscode-icons",
+			],
+
+			"settings": {
+				"workbench.iconTheme": "vscode-icons",
+				"editor.bracketPairColorization.enabled": true,
+				"editor.minimap.scale": 2,
+				"editor.indentSize": "tabSize",
+				"editor.tabSize": 4,
+				"editor.renderWhitespace": "all",
+				"files.trimTrailingWhitespace": true
+			}
+		},
+		"codespaces": {
+			"openFiles": [
+				"README.md"
+			]
+		}
+	}
+}
