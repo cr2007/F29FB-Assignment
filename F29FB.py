@@ -1,5 +1,8 @@
 ##### F29FB Assignment #####
 ## CHANDRASHEKHAR RAMAPRASAD - cr2007 ##
+import time
+
+start = time.time()
 
 def action(input_val: str, write: str, move: str, next_state: str):
     """Function to check if the input value is the same as the value on the tape
@@ -143,3 +146,7 @@ if accept:
 else:
     # Printing the error message
     print(f"Input not accepted on state = {state}\n")
+
+end = time.time()  # End time
+# Printing the time taken
+print(f"\nTime taken: {end - start:.2f} seconds")
