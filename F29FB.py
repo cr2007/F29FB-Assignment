@@ -36,7 +36,7 @@ for n in range(length):
     elif val[n] == '1' or val[n] == '*':
         tape[i] = val[n]  # Else add the value to the tape
     else:
-        print("Invalid Input")  # If the input is invalid, then print an error message
+        print("Invalid Input\nThe input value must be a unary value (i.e. 2*3 is 11*111)")  # If the input is invalid, then print an error message
         exit()                 # Exit the program
     i += 1                # Incrementing the tape index
 
