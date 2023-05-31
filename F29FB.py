@@ -34,9 +34,11 @@ tape_head: int = 1  # Tape head
 # Adding the input value to the tape
 for n in range(length):
     # If value is 0, then it is a blank space
-    if val[n] == '0' or val[n].lower() == 'b':
+    # if val[n] == '0' or val[n].lower() == 'b':
+    if val[n].lower() in ['0', 'b']:
         tape[i] = '∧'
-    elif val[n] == '1' or val[n] == '*':
+    # elif val[n] == '1' or val[n] == '*':
+    elif val[n] in ['1', '*']:
         tape[i] = val[n]  # Else add the value to the tape
     else:
         print("Invalid Input\nThe input value must be a unary value (i.e. 2*3 is 11*111)")  # If the input is invalid, then print an error message
