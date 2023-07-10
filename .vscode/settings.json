@@ -1,0 +1,11 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.minimap.scale": 2,
+    // Tab Size of 4
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 4,
+    "editor.renderWhitespace": "all",
+    "files.trimTrailingWhitespace": true,
+    "editor.wordWrap": "on"
+}
