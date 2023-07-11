@@ -2,7 +2,6 @@
 ## CHANDRASHEKHAR RAMAPRASAD - cr2007 ##
 import time
 
-start = time.time()
 
 def action(input_val: str, write: str, move: str, next_state: str):
     """Function to check if the input value is the same as the value on the tape
@@ -21,8 +20,8 @@ def action(input_val: str, write: str, move: str, next_state: str):
 
 
 # Input Value
-input_text = "Make sure to enter your number as a set of ones\n(i.e. if the number if 2 * 3, enter it is '11*111')\nIf the want to enter 0, enter either '0' or 'B'\nEnter the input: "
-val: str = input(input_text)
+val: str = input("Make sure to enter your number as a set of ones\n(i.e. if the number if 2 * 3, enter it is '11*111')\nIf the want to enter 0, enter either '0' or 'B'\nEnter the input: ")
+start = time.time()
 
 length: int = len(val)     # Length of the input
 tape = ['∧'] * (length*3)  # Initialising the tape with the values
@@ -34,9 +33,11 @@ tape_head: int = 1  # Tape head
 # Adding the input value to the tape
 for n in range(length):
     # If value is 0, then it is a blank space
-    if val[n] == '0' or val[n].lower() == 'b':
+    # if val[n] == '0' or val[n].lower() == 'b':
+    if val[n].lower() in ['0', 'b']:
         tape[i] = '∧'
-    elif val[n] == '1' or val[n] == '*':
+    # elif val[n] == '1' or val[n] == '*':
+    elif val[n] in ['1', '*']:
         tape[i] = val[n]  # Else add the value to the tape
     else:
         print("Invalid Input\nThe input value must be a unary value (i.e. 2*3 is 11*111)")  # If the input is invalid, then print an error message
@@ -149,4 +150,4 @@ else:
 
 end = time.time()  # End time
 # Printing the time taken
-print(f"\nTime taken: {end - start:.2f} seconds")
+print(f"\nTime taken: {end - start:.3f} seconds")

@@ -1,5 +1,5 @@
 {
-	"name": "Codespace for F29FB Assignment",
+	"name": "F29FB Assignment Codespace",
 	"image":"mcr.microsoft.com/devcontainers/universal:2",
 	"customizations": {
 		"vscode": {
@@ -19,23 +19,11 @@
 				"yzhang.markdown-all-in-one",
 				"bierner.github-markdown-preview",
 				// Icon Pack
-				"vscode-icons-team.vscode-icons",
-			],
-
-			"settings": {
-				"workbench.iconTheme": "vscode-icons",
-				"editor.bracketPairColorization.enabled": true,
-				"editor.minimap.scale": 2,
-				"editor.indentSize": "tabSize",
-				"editor.tabSize": 4,
-				"editor.renderWhitespace": "all",
-				"files.trimTrailingWhitespace": true
-			}
+				"vscode-icons-team.vscode-icons"
+			]
 		},
 		"codespaces": {
-			"openFiles": [
-				"README.md"
-			]
+			"openFiles": [ "README.md", "F29FB.py"]
 		}
 	}
 }

@@ -1,5 +1,20 @@
 {
     "recommendations": [
-        "github.copilot"
+        // Python Extension
+        "ms-python.python",
+        "ms-python.pylint",
+        "njpwerner.autodocstring",
+        "esbenp.prettier-vscode",
+        // Miscellaneous Extensions
+        "VisualStudioExptTeam.vscodeintellicode",
+        "VisualStudioExptTeam.intellicode-api-usage-examples",
+        "ms-vscode-remote.remote-containers",
+        "eamodio.gitlens", // GitLens
+        "mhutchie.git-graph",
+        // Markdown
+        "yzhang.markdown-all-in-one",
+        "bierner.github-markdown-preview",
+        // Icon Pack
+        "vscode-icons-team.vscode-icons"
     ]
 }
