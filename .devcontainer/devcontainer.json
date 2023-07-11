@@ -1,6 +1,6 @@
 {
 	"name": "F29FB Assignment Codespace",
-	"image":"mcr.microsoft.com/devcontainers/universal:2",
+	"image":"mcr.microsoft.com/devcontainers/python:3",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -13,8 +13,8 @@
 				"VisualStudioExptTeam.vscodeintellicode",
 				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"ms-vscode-remote.remote-containers",
-                "eamodio.gitlens", // GitLens
-                "mhutchie.git-graph",
+				"eamodio.gitlens", // GitLens
+				"mhutchie.git-graph",
 				// Markdown
 				"yzhang.markdown-all-in-one",
 				"bierner.github-markdown-preview",
