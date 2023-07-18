@@ -1,6 +1,8 @@
 <!-- omit from toc -->
 # F29FB Assignment
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/cr2007/F29FB-Assignment)
+
 <!-- omit from toc -->
 ## Course: [Foundations 2](https://curriculum.hw.ac.uk/coursedetails/F29FB?termcode=202223) (F29FB)
 
