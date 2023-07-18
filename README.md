@@ -13,6 +13,8 @@ Unary Multiplication Turing Machine Code
 - [Unaccepted inputs (Example):](#unaccepted-inputs-example)
 
 ## Steps:
+(Make sure you have [Python](https://www.python.org/downloads/) installed on your machine before running the code)
+
 1. Go to the [Python file](F29FB.py)
 2. Open your terminal
 3. Type `python3 F29FB.py`
