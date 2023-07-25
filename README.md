@@ -1,7 +1,23 @@
 <!-- omit from toc -->
 # F29FB Assignment
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/cr2007/F29FB-Assignment)
+<table align="center">
+  <tr>
+    <td align="center">
+        <!-- Python -->
+        <a href="F29FB.py">
+            <img alt="Python" title="Python Programming Language" src="https://img.shields.io/badge/Python-informational?style=flat-sqaure&logo=python&logoColor=white&color=3776ab">
+        </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+        <a href="https://codespaces.new/cr2007/F29FB-Assignment">
+            <img alt="Open in GitHub Codespaces" title="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg">
+        </a>
+    </td>
+  </tr>
+</table>
 
 <!-- omit from toc -->
 ## Course: [Foundations 2](https://curriculum.hw.ac.uk/coursedetails/F29FB?termcode=202223) (F29FB)
