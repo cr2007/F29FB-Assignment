@@ -1,7 +1,8 @@
 ##### F29FB Assignment #####
 ## CHANDRASHEKHAR RAMAPRASAD - cr2007 ##
 import time
-
+import streamlit as st
+import pandas as pd
 
 def action(input_val: str, write: str, move: str, next_state: str):
     """Function to check if the input value is the same as the value on the tape
