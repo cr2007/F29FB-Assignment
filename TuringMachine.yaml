@@ -9,8 +9,8 @@ source code: |-
   table:
     q0:
       '1': {write: ' ', R: q1}
-      ' ': {write: ' ', R: q10} 
-      '*': {write: '*', L: q9}  
+      ' ': {write: ' ', R: q10}
+      '*': {write: '*', L: q9}
     q1:
       '1': {write: '1', R: q1}
       '*': {write: '*', R: q2}
