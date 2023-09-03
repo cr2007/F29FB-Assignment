@@ -1,6 +1,6 @@
 {
 	"name": "F29FB Assignment Codespace",
-	"image":"mcr.microsoft.com/devcontainers/python:3",
+	"dockerFile": "Dockerfile",
 	"customizations": {
 		"vscode": {
 			"extensions": [
