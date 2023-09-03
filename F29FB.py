@@ -20,7 +20,15 @@ def action(input_val: str, write: str, move: str, next_state: str):
     return False            # Returning False if the action is unsuccessful
 
 
+st.title("F29FB Assignment")
+st.subheader("Unary Multiplication")
+st.write("Enter your text below as a set of ones!")
+st.write("Example: If you want to calculate $2 \\times 3$, your input would be `11*111`")
+st.write("")
+st.write("If you want to enter $0$, enter either `0` or `B` (for blank tape)")
+
 # Input Value
+val: str = st.text_input("Enter your input", "11*111")
 val: str = input("Make sure to enter your number as a set of ones\n(i.e. if the number if 2 * 3, enter it is '11*111')\nIf the want to enter 0, enter either '0' or 'B'\nEnter the input: ")
 start = time.time()
 
