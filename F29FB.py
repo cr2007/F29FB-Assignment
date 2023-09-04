@@ -67,11 +67,14 @@ accept: bool = False     # To check if the input is accepted
 old_tape_head = -1       # To check if the tape head has moved
 tape_count = 0           # To count the number of tapes
 
+output = []  # Output list
+
 # While the tape head has moved
 while old_tape_head != tape_head:
     old_tape_head = tape_head                              # Updating the old tape head
     # print(tape, "Head: ", tape_head, "State: ", state)   # Printing the tape
     print(f"{tape} Head: {tape_head:2d}  State: {state}")  # Printing the tape
+    output.append({'Tape': tape.copy(), 'Head': tape_head, 'State': state}) # Appending the tape to the output list
     tape_count += 1                                        # Incrementing the tape count
 
     # q0 State
