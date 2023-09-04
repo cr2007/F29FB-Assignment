@@ -154,10 +154,15 @@ if accept:
     print("\nSuccessfull!!")
     print("*****************************************")
     # Printing the number of tapes used
+    st.write("Number of tapes used: ", tape_count)  # Displaying the number of tapes used
     print(f"Number of tapes used: {tape_count}")
     print("*****************************************")
+
+    df = pd.DataFrame(output)  # Creating a dataframe from the output list
+    st.write(df)               # Displaying the dataframe
 else:
     # Printing the error message
+    st.write(f"Input not accepted on state = {state}\n")
     print(f"Input not accepted on state = {state}\n")
 
 end = time.time()  # End time
