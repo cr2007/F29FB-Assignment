@@ -1,4 +1,4 @@
 FROM python:latest
 
 # Install Streamlit
-RUN pip install streamlit
+RUN pip install streamlit pandas
