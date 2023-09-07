@@ -29,7 +29,6 @@ st.write("If you want to enter $0$, enter either `0` or `B` (for blank tape)")
 
 # Input Value
 val: str = st.text_input("Enter your input", "11*111")
-start = time.time()
 
 length: int = len(val)     # Length of the input
 tape = ['∧'] * (length*3)  # Initialising the tape with the values
@@ -39,6 +38,8 @@ i: int = 1          # Tape index
 tape_head: int = 1  # Tape head
 
 if st.button("Calculate"):
+    start = time.time()
+
     with st.spinner('Wait for it...'):
         # Adding the input value to the tape
         for n in range(length):
@@ -152,6 +153,8 @@ if st.button("Calculate"):
             # Printing the number of tapes used
             st.success("Successful!", icon="✅")
             st.write(f"Number of tapes used: **{tape_count}**")  # Displaying the number of tapes used
+            end = time.time()  # End time
+            st.write(f"Time taken: **{end - start:.3f}** seconds")
 
             df = pd.DataFrame(output)  # Creating a dataframe from the output list
             st.write(df)               # Displaying the dataframe
@@ -160,6 +163,5 @@ if st.button("Calculate"):
             st.write(f"Input not accepted on state = {state}\n")
             print(f"Input not accepted on state = {state}\n")
 
-        end = time.time()  # End time
         # Printing the time taken
         print(f"\nTime taken: {end - start:.3f} seconds")
