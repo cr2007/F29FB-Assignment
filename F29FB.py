@@ -49,7 +49,7 @@ if st.button("Calculate"):
             elif val[n] in ['1', '*']:
                 tape[i] = val[n] # Else add the value to the tape
             else:
-                st.error("**Invalid Input:** The input value must be a **unary** value (i.e. $2 \\times 3$ is `11*111`)", icon="⚠️")
+                st.error("**Invalid Input:** The input value must be a **unary** value (i.e. $2 \\times 3$ is **`11*111`**)", icon="⚠️")
                 exit()
 
             i += 1                # Incrementing the tape index
