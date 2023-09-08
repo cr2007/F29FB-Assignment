@@ -3,7 +3,7 @@
 import time
 
 
-def action(input_val: str, write: str, move: str, next_state: str):
+def action(input_val: str, write: str, move: str, next_state: str) -> bool:
     """
     This function is used to perform the actions of the Turing Machine
 
