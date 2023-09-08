@@ -39,8 +39,8 @@ def action(input_val: str, write: str, move: str, next_state: str) -> bool:
 val: str = input("Make sure to enter your number as a set of ones\n(i.e. if the number if 2 * 3, enter it is '11*111')\nIf the want to enter 0, enter either '0' or 'B'\nEnter the input: ")
 start = time.time()
 
-length: int = len(val)     # Length of the input
-tape = ['∧'] * (length*3)  # Initialising the tape with the values
+length: int = len(val)                # Length of the input
+tape = ['∧' for _ in range(length*3)] # Initialising the tape with blank values initially
 
 # Initialising the tape variables
 tape_index: int = 1          # Tape index
