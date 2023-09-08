@@ -5,9 +5,26 @@ import streamlit as st
 import pandas as pd
 
 def action(input_val: str, write: str, move: str, next_state: str):
-    """Function to check if the input value is the same as the value on the tape
-        and if it is, then it performs the action and returns True.\n
-        If the input value is not the same as the value on the tape, then it returns False."""
+    """
+    This function is used to perform the actions of the Turing Machine
+
+    Parameters
+    ----------
+    input_val : str
+        The input value to be checked
+    write : str
+        The value to be written to the tape
+    move : str
+        The direction to move the tape head
+    next_state : str
+        The next state to move to
+
+    Returns
+    -------
+    bool
+        Returns True if the action is successful, else False
+    """
+
     # Initialising the global variables
     global tape_head, state
     if tape[tape_head] == input_val:
