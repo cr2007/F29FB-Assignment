@@ -43,22 +43,22 @@ length: int = len(val)     # Length of the input
 tape = ['∧'] * (length*3)  # Initialising the tape with the values
 
 # Initialising the tape variables
-i: int = 1          # Tape index
+tape_index: int = 1          # Tape index
 tape_head: int = 1  # Tape head
 
 # Adding the input value to the tape
-for n in range(length):
+for input_value in range(length):
     # If value is 0, then it is a blank space
-    # if val[n] == '0' or val[n].lower() == 'b':
-    if val[n].lower() in ['0', 'b']:
-        tape[i] = '∧'
+    # if val[input_value] == '0' or val[n].lower() == 'b':
+    if val[input_value].lower() in ['0', 'b']:
+        tape[tape_index] = '∧'
     # elif val[n] == '1' or val[n] == '*':
-    elif val[n] in ['1', '*']:
-        tape[i] = val[n]  # Else add the value to the tape
+    elif val[input_value] in ['1', '*']:
+        tape[tape_index] = val[input_value]  # Else add the value to the tape
     else:
         print("Invalid Input\nThe input value must be a unary value (i.e. 2*3 is 11*111)")  # If the input is invalid, then print an error message
         exit()                 # Exit the program
-    i += 1                # Incrementing the tape index
+    tape_index += 1                # Incrementing the tape index
 
 # Declaring variables so that characters don't have to be used everytime
 q0, q1, q2, q3, q4 = 'q0', 'q1', 'q2', 'q3', 'q4'  # States q0-q4
