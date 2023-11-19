@@ -165,12 +165,12 @@ if st.button("Calculate"):
             else:
                 accept = True
 
+        end = time.time()  # End time
         # If the input is accepted
         if accept:
             # Printing the number of tapes used
             st.success("Successful!", icon="✅")
             st.write(f"Number of tapes used: **{tape_count}**")  # Displaying the number of tapes used
-            end = time.time()  # End time
             st.write(f"Time taken: **{end - start:.3f}** seconds")
 
             df = pd.DataFrame(output)  # Creating a dataframe from the output list
