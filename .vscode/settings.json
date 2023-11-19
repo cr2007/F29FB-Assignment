@@ -8,5 +8,13 @@
     "editor.tabSize": 4,
     "editor.renderWhitespace": "all",
     "files.trimTrailingWhitespace": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "git.autofetch": true,
+	"[python]": {
+		"editor.rulers": [100]
+	},
+	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"audioCues.terminalCommandFailed": "on",
+	"audioCues.format": "userGesture",
 }
