@@ -1,6 +1,15 @@
 {
 	"name": "F29FB Assignment Codespace",
-	"dockerFile": "Dockerfile",
+	"image": "mcr.microsoft.com/devcontainers/python:3",
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "CSK"
+		},
+		"ghcr.io/devcontainers/features/github-cli:1": {
+			"version": "latest"
+		}
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -20,10 +29,16 @@
 				"bierner.github-markdown-preview",
 				// Icon Pack
 				"vscode-icons-team.vscode-icons"
-			]
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"terminal.integrated.defaultProfile.linux": "zsh"
+			}
 		},
 		"codespaces": {
-			"openFiles": [ "README.md", "F29FB.py"]
-		}
+			"openFiles": ["README.md", "F29FB.py"]
+		},
+		"postStartCommand": "pip install -r requirements.txt",
+		"remoteUser": "CSK"
 	}
 }
