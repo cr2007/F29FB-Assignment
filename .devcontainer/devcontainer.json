@@ -37,8 +37,8 @@
 		},
 		"codespaces": {
 			"openFiles": ["README.md", "F29FB.py"]
-		},
-		"postStartCommand": "pip install -r requirements.txt",
-		"remoteUser": "CSK"
-	}
+		}
+	},
+	"postStartCommand": "pip install -r requirements.txt",
+	"remoteUser": "CSK"
 }
