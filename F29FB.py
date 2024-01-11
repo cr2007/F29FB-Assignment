@@ -89,10 +89,13 @@ if st.button("Calculate"):
 
         # While the tape head has moved
         while old_tape_head != tape_head:
-            old_tape_head = tape_head                              # Updating the old tape head
+            old_tape_head = tape_head                         # Updating the old tape head
             print(f"Tape {tape_count} printed successfully")  # Printing the tape
-            output.append({'Tape': tape.copy(), 'Head': tape_head, 'State': state}) # Appending the tape to the output list
-            tape_count += 1                                        # Incrementing the tape count
+
+            output.append({'Tape': tape.copy(), 'Head': tape_head,
+                           'State': state}) # Appending the tape to the output list
+
+            tape_count+= 1 # Incrementing the tape count
 
             # q0 State
             if state == q0:
@@ -170,7 +173,7 @@ if st.button("Calculate"):
         if accept:
             # Printing the number of tapes used
             st.success("Successful!", icon="✅")
-            st.write(f"Number of tapes used: **{tape_count}**")  # Displaying the number of tapes used
+            st.write(f"Number of tapes used: **{tape_count}**") # Display the number of tapes used
             st.write(f"Time taken: **{end - start:.3f}** seconds")
 
             df = pd.DataFrame(output)  # Creating a dataframe from the output list
