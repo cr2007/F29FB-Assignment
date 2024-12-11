@@ -1,0 +1,12 @@
+studentFirstName: John
+studentLastName: Doe
+studentID: H00123456
+studentEmail: jd1234
+
+courseName: Foundations 2
+courseCode: F29FB
+courseworkTitle: Assignment
+
+# Assessment Type (Individual / Group)
+assessmentType: Individual
+submissionDate: <Enter Date in metadata.yml file>
