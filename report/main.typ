@@ -3,15 +3,13 @@
 #import "@preview/fletcher:0.5.3" as fletcher: diagram, node, edge
 #import "@preview/oxifmt:0.2.1": strfmt
 
-#set document(
-  author: "Chandrashekhar R",
-  title: "F29FB Assignment",
-)
-
-// #set text(font: "Segoe UI")
-#set text(font: "Calibri")
-
 #let data = yaml("metadata.yml")
+
+#set text(font: "Calibri")
+#set document(
+  author: strfmt("{} {}", data.studentFirstName, data.studentLastName),
+  title: strfmt("{} {}", data.courseCode, data.courseworkTitle),
+)
 
 #show: declarationOfAuthorship.with()
 
@@ -22,7 +20,7 @@
 
   #text(
     size: 48pt,
-    "F29FB Assignment"
+    strfmt("{} {}", data.courseCode, data.courseworkTitle)
   )\ \ \
   #text(
     strfmt("{} {}", data.studentFirstName, data.studentLastName)
@@ -30,16 +28,12 @@
 
   #data.studentID | #link(strfmt("mailto:{}@hw.ac.uk", data.studentEmail))[#data.studentEmail]
 
-  #rect(
-    fill: rgb("#34A853"),
-    width: 100%,
-    text(
-      font: "Segoe UI",
-      size: 24pt,
-      fill: white,
-      "Green Number: 78"
-    )
-  )
+  #rect(fill: rgb("#34A853"), width: 100%, text(
+    font: "Segoe UI",
+    size: 24pt,
+    fill: white,
+    strfmt("Green Number: {}", data.greenType)
+  ))
 ])
 
 #pagebreak()
