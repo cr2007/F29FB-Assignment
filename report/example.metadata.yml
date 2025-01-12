@@ -6,6 +6,7 @@ studentEmail: jd1234
 courseName: Foundations 2
 courseCode: F29FB
 courseworkTitle: Assignment
+greenType: 1
 
 # Assessment Type (Individual / Group)
 assessmentType: Individual
