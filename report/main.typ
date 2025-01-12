@@ -6,6 +6,7 @@
 #let data = yaml("metadata.yml")
 
 #set text(font: "Calibri")
+#set line(length: 100%)
 #set document(
   author: strfmt("{} {}", data.studentFirstName, data.studentLastName),
   title: strfmt("{} {}", data.courseCode, data.courseworkTitle),
@@ -49,7 +50,7 @@
   [#show: turingMachineGraph.with()]
 ) <TM-Graph> \
 
-#line(length: 100%)
+#line()
 
 #heading("Section 2")
 
@@ -59,7 +60,7 @@ The key difference between my proposed graph and the given graph is:
 - The proposed TM graph has additional transitions in states $q_11$, $q_12$, $q_13$, $q_14$, $q_15$, $q_16$, $q_17$ compared to the given graph
 - The proposed graph writes the $*$ symbol in some of its transitions, while the given graph does not use that symbol
 
-#line(length: 100%)
+#line()
 #pagebreak()
 
 #heading("Section 3")
@@ -149,7 +150,7 @@ Where $q_0$ is the start state, and $q_17$ is the halt state
   $q_17$, table.cell(colspan: 4, "Final (Accept) State")
 )
 
-\ #line(length: 100%)
+\ #line()
 
 #heading("Section 4")
 
@@ -169,7 +170,7 @@ It is also very flexible and easy to define and manipulate complex data structur
   alt: "Printing the status of the Turing machine"
 ))
 
-\ #line(length: 100%)
+\ #line()
 
 #heading("Section 5")
 
@@ -210,7 +211,7 @@ The transition rules dictate the movement of the head and the symbols written on
   image("images/Python_Code/Result_Printing_Python-Code.png")
 )
 
-\ #line(length: 100%)
+\ #line()
 #pagebreak()
 
 #heading("Section 7")
@@ -241,7 +242,7 @@ The transition rules dictate the movement of the head and the symbols written on
   ),
 )
 
-#line(length: 100%)
+#line()
 
 #heading("Section 8")
 
@@ -252,4 +253,4 @@ The program also uses a global variable to keep track of the state and the tape 
 Regarding the individual states, the program uses a combination of conditional statements and branching to determine the next state and tape head position.
 This approach is efficient since it reduces the number of iterations required to perform the computations.
 
-#line(length: 100%)
+#line()
