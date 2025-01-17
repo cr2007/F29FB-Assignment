@@ -1,6 +1,9 @@
 {
 	"name": "F29FB Assignment Codespace",
 	"image":"mcr.microsoft.com/devcontainers/python:3",
+	"features": {
+        "ghcr.io/michidk/devcontainers-features/typst:1": {}
+    },
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -19,7 +22,8 @@
 				"yzhang.markdown-all-in-one",
 				"bierner.github-markdown-preview",
 				// Icon Pack
-				"vscode-icons-team.vscode-icons"
+				"vscode-icons-team.vscode-icons",
+				"myriad-dreamin.tinymist" // Typst
 			]
 		},
 		"codespaces": {
