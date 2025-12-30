@@ -39,20 +39,22 @@ jobs:
 
       - name: Prepare metadata.yml
         env:
-          STUDENT_FIRST_NAME: ${{ secrets.STUDENT_FIRST_NAME }}
-          STUDENT_LAST_NAME:  ${{ secrets.STUDENT_LAST_NAME }}
-          STUDENT_EMAIL:      ${{ secrets.STUDENT_EMAIL }}
-          STUDENT_ID:         ${{ secrets.STUDENT_ID }}
-          STUDENT_GREEN_TYPE: ${{ secrets.STUDENT_GREEN_TYPE }}
+          STUDENT_FIRST_NAME:      ${{ secrets.STUDENT_FIRST_NAME }}
+          STUDENT_LAST_NAME:       ${{ secrets.STUDENT_LAST_NAME }}
+          STUDENT_EMAIL:           ${{ secrets.STUDENT_EMAIL }}
+          STUDENT_ID:              ${{ secrets.STUDENT_ID }}
+          STUDENT_GREEN_TYPE:      ${{ secrets.STUDENT_GREEN_TYPE }}
+          STUDENT_SUBMISSION_DATE: ${{ secrets.STUDENT_SUBMISSION_DATE }}
         run: |
           mv report/example.metadata.yml report/metadata.yml
 
           yq -i '
-            .studentFirstName = strenv(STUDENT_FIRST_NAME) |
-            .studentLastName  = strenv(STUDENT_LAST_NAME)  |
-            .studentEmail     = strenv(STUDENT_EMAIL)      |
-            .studentID        = strenv(STUDENT_ID)         |
-            .greenType        = strenv(STUDENT_GREEN_TYPE)
+            .studentFirstName = strenv(STUDENT_FIRST_NAME)      |
+            .studentLastName  = strenv(STUDENT_LAST_NAME)       |
+            .studentEmail     = strenv(STUDENT_EMAIL)           |
+            .studentID        = strenv(STUDENT_ID)              |
+            .greenType        = strenv(STUDENT_GREEN_TYPE)      |
+            .submissionDate   = strenv(STUDENT_SUBMISSION_DATE)
           ' report/metadata.yml
 
       - name: Compile Typst to PDF
