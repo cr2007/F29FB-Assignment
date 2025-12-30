@@ -13,8 +13,6 @@
 				"njpwerner.autodocstring",
 				"esbenp.prettier-vscode",
 				// Miscellaneous Extensions
-				"VisualStudioExptTeam.vscodeintellicode",
-				"VisualStudioExptTeam.intellicode-api-usage-examples",
 				"ms-vscode-remote.remote-containers",
 				"eamodio.gitlens", // GitLens
 				"mhutchie.git-graph",

@@ -21,4 +21,5 @@
     "accessibility.signals.format": {
         "sound": "userGesture"
     },
+    "workbench.sideBar.location": "right"
 }
