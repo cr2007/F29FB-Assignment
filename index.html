@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>F29FB Assignment</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #111111;
+            --link: #0066cc;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0d1117;
+                --fg: #c9d1d9;
+                --link: #58a6ff;
+            }
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>F29FB Assignment</h1>
+        <ul>
+            <li><a href="https://f29fb-assignment.streamlit.app/">Streamlit App</a></li>
+            <li><a href="./assignment.pdf">Assignment PDF Report</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
