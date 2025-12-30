@@ -1,6 +1,5 @@
 #import "authorship.typ": declarationOfAuthorship
 #import "turingMachine.typ": turingMachineGraph
-#import "@preview/fletcher:0.5.3" as fletcher: diagram, node, edge
 #import "@preview/oxifmt:0.2.1": strfmt
 
 #let data = yaml("metadata.yml")
